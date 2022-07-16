@@ -5,11 +5,17 @@ spring:
     oauth2:
       resourceserver:
         opaquetoken:
-          introspection-uri: http://localhost:8080/oauth/check_token
+          introspection-uri: http://localhost:8080
           client-id: client1
           client-secret: secret
-
+      permit-pattern:
+        - "/public/**"
 logging:
   config: classpath:log4j2.xml
   log-request: true
   log-response: true
+
+cors:
+  allowed-origins:
+    - "http://example.com"
+    - "http://example2.com"

@@ -16,6 +16,7 @@ logging:
   log-response: true
 
 cors:
+  allow-credentials: true
   allowed-origins:
-    - "http://example.com"
-    - "http://example2.com"
+    - "http://localhost:4200"
+    - "http://test-cookie.vn:4200"
